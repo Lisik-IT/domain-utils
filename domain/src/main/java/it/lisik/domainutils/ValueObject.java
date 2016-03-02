@@ -1,5 +1,5 @@
 package it.lisik.domainutils;
 
-public interface ValueObject {
-    String getValue();
+public interface ValueObject<T> {
+    T getValue();
 }

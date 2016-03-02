@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.jetbrains.annotations.NotNull;
 
-public class EmailAddress implements ValueObject {
+public class EmailAddress implements ValueObject<String> {
     private final static EmailValidator emailValidator = EmailValidator.getInstance();
     private final String address;
 
