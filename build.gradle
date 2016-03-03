@@ -1,5 +1,11 @@
 plugins {
     id 'java'
+    id "com.jfrog.artifactory" version "4.0.0"
+}
+
+allprojects {
+    apply plugin: 'maven-publish'
+    apply plugin: "com.jfrog.artifactory"
 }
 
 sourceCompatibility = 1.8
@@ -11,6 +17,45 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+artifactory {
+    clientConfig.setIncludeEnvVars(true)
+    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
+
+    publish {
+        repository {
+            repoKey = 'libs-snapshot-local'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+            maven = true
+        }
+
+        defaults {
+            publications('maven')
+            publishArtifacts = true
+        }
+    }
+
+
+    resolve {
+        repository {
+            repoKey = 'libs-release'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+            maven = true
+
+        }
+    }
+}
+
+artifactoryPublish {
+    dependsOn jar
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
 }
