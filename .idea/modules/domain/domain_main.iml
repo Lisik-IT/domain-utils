@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":domain:main" external.linked.project.path="$MODULE_DIR$/../../../domain" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="it.lisik.domain-utils" external.system.module.type="sourceSet" external.system.module.version="0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/../../../domain/build/classes/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../domain/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../domain/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../domain/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.4" level="project" />
+    <orderEntry type="library" name="Gradle: commons-validator:commons-validator:1.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.googlecode.libphonenumber:libphonenumber:7.2.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:15.0" level="project" />
+    <orderEntry type="library" name="Gradle: commons-beanutils:commons-beanutils:1.9.2" level="project" />
+    <orderEntry type="library" name="Gradle: commons-digester:commons-digester:1.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />
+  </component>
+  <component name="sonarModuleSettings">
+    <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />
+    <option name="serverName" value="&lt;PROJECT&gt;" />
+  </component>
+</module>
