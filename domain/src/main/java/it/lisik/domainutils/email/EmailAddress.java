@@ -12,7 +12,8 @@ public class EmailAddress implements ValueObject<String> {
     private final String address;
 
     public EmailAddress(@NotNull String address) {
-        this.address = Preconditions.checkNotNull(StringUtils.trim(address));
+        address = Preconditions.checkNotNull(StringUtils.trim(address));
+        this.address = address.toLowerCase();
 
         if (!emailValidator.isValid(this.address)) {
             throw new EmailAddressNotValidException(this.address);
