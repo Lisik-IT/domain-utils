@@ -29,7 +29,6 @@ public class DomainUtilsIntegrator implements Integrator {
             } catch (Exception e) {
                 LOGGER.error("Couldn't initialize {} with default constructor", type.getCanonicalName());
 //                throw new RuntimeException(e);
-                continue;
             }
         }
 
@@ -44,7 +43,7 @@ public class DomainUtilsIntegrator implements Integrator {
                 LOGGER.info("Registering {} value object", valueObject.getCanonicalName());
                 configuration.registerTypeOverride(new GenericSingleStringType(valueObject), new String[]{valueObject.getClass().getName()});
             } catch (NoSuchMethodException e) {
-                continue;
+                LOGGER.error("Cannot Register {} with GenericSingleStringType", valueObject.getCanonicalName());
             }
         }
 
@@ -56,7 +55,6 @@ public class DomainUtilsIntegrator implements Integrator {
     }
 
     public void integrate(MetadataImplementor metadata, SessionFactoryImplementor sessionFactory, SessionFactoryServiceRegistry serviceRegistry) {
-
     }
 
     public void disintegrate(SessionFactoryImplementor sessionFactory, SessionFactoryServiceRegistry serviceRegistry) {
