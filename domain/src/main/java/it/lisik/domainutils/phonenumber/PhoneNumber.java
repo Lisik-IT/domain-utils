@@ -23,10 +23,6 @@ public class PhoneNumber implements ValueObject<String> {
         }
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
     @Override
     public String toString() {
         return new ToStringBuilder(this)

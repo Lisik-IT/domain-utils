@@ -11,7 +11,7 @@ public class EmailAddressTest {
     @Test
     public void testValidEmailAddress() {
         final EmailAddress emailAddress = new EmailAddress("mateusz@lisik.it");
-        assertThat(emailAddress.getAddress(), is(equalTo("mateusz@lisik.it")));
+        assertThat(emailAddress.getValue(), is(equalTo("mateusz@lisik.it")));
     }
 
     @Test(expected = EmailAddressNotValidException.class)

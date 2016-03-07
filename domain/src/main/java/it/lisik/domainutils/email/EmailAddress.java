@@ -20,10 +20,6 @@ public class EmailAddress implements ValueObject<String> {
         }
     }
 
-    public String getAddress() {
-        return address;
-    }
-
     @Override
     public String getValue() {
         return address;

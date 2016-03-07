@@ -27,10 +27,6 @@ public class LastName implements ValueObject<String> {
         this.lastName = lastName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
     @Override
     public String getValue() {
         return lastName;
