@@ -4,20 +4,23 @@ plugins {
     id 'idea'
 }
 
+version '0.1.2-SNAPSHOT'
+
 allprojects {
     apply plugin: 'maven-publish'
     apply plugin: "com.jfrog.artifactory"
+
+    ext {
+        version = "0.1.2-SNAPSHOT"
+    }
 }
 
 sourceCompatibility = 1.8
 group 'it.lisik.domain-utils'
-version '0.1-SNAPSHOT'
-
 
 repositories {
     mavenCentral()
 }
-
 
 artifactory {
     clientConfig.setIncludeEnvVars(true)

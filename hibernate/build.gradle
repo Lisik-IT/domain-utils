@@ -1,5 +1,5 @@
 group 'it.lisik.domain-utils'
-version '0.1-SNAPSHOT'
+version "${ext.version}"
 
 apply plugin: 'java'
 
