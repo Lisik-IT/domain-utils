@@ -11,7 +11,7 @@ public class PhoneNumberType extends AbstractSingleColumnStandardBasicType<Phone
     }
 
     public String getName() {
-        return "emailaddress";
+        return "phonenumber";
     }
 
     public PhoneNumber stringToObject(String xml) throws Exception {
