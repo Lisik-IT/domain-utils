@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id "com.jfrog.artifactory" version "4.0.0"
     id "com.github.kt3k.coveralls" version "2.5.0"
+//    id "com.coverity.ondemand" version "1.5.61"
     id 'idea'
 }
 
@@ -34,13 +35,13 @@ repositories {
 
 artifactory {
     clientConfig.setIncludeEnvVars(true)
-    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
+    contextUrl = System.getenv("ARTIFACTORY_URL") ?: "${artifactory_contextUrl}"//The base Artifactory URL if not overridden by the publisher/resolver
 
     publish {
         repository {
             repoKey = 'libs-snapshot-local'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = System.getenv("ARTIFACTORY_USER") ?: "${artifactory_user}"
+            password = System.getenv("ARTIFACTORY_PASSWORD") ?: "${artifactory_password}"
             maven = true
         }
 
@@ -54,8 +55,8 @@ artifactory {
     resolve {
         repository {
             repoKey = 'libs-release'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = System.getenv("ARTIFACTORY_USER") ?: "${artifactory_user}"
+            password = System.getenv("ARTIFACTORY_PASSWORD") ?: "${artifactory_password}"
             maven = true
 
         }
