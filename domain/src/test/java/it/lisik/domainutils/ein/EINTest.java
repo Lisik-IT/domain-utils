@@ -11,14 +11,6 @@ public class EINTest {
     private final static String einString = "55-5555555";
 
     @Test
-    public void testEmptyConstructor() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        final Constructor<EIN> constructor = EIN.class.getDeclaredConstructor();
-        constructor.setAccessible(true);
-
-        constructor.newInstance();
-    }
-
-    @Test
     public void testConstructor() {
         new EIN(einString);
     }

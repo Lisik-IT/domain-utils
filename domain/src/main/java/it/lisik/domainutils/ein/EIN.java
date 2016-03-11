@@ -9,18 +9,7 @@ public class EIN implements ValueObject<String> {
     private final static Pattern PATTERN = Pattern.compile("^(0[1-9]|[1-9]\\d)-\\d{7}$");
     private String value;
 
-    private EIN() {}
-
     public EIN(String value) {
-        setValue(value);
-    }
-
-    @Override
-    public String getValue() {
-        return value;
-    }
-
-    private void setValue(String value) {
         final Matcher matcher = PATTERN.matcher(value);
 
         if (!matcher.matches()) {
@@ -28,5 +17,10 @@ public class EIN implements ValueObject<String> {
         }
 
         this.value = value;
+    }
+
+    @Override
+    public String getValue() {
+        return value;
     }
 }
