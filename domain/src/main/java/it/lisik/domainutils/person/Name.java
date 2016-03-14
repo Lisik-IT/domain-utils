@@ -49,6 +49,6 @@ public class Name implements ValueObject<String> {
 
     @Override
     public String getValue() {
-        return firstName + " " + lastName;
+        return firstName.getValue() + " " + lastName.getValue();
     }
 }

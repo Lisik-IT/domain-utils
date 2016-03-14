@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class EIN implements ValueObject<String> {
     private final static Pattern PATTERN = Pattern.compile("^(0[1-9]|[1-9]\\d)-\\d{7}$");
-    private String value;
+    private final String value;
 
     public EIN(String value) {
         final Matcher matcher = PATTERN.matcher(value);
