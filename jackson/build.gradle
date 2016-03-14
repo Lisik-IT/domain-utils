@@ -9,14 +9,6 @@ repositories {
     mavenCentral()
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from components.java
-        }
-    }
-}
-
 dependencies {
     compile project(':domain')
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.2'

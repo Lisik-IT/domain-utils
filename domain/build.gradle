@@ -9,14 +9,6 @@ repositories {
     mavenCentral()
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from components.java
-        }
-    }
-}
-
 dependencies {
     compile('org.apache.commons:commons-lang3:3.4')
     compile('commons-validator:commons-validator:1.5.0')
