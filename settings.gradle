@@ -1,2 +1,3 @@
 rootProject.name = 'domain-utils'
-include 'domain', 'hibernate', 'jackson'
+include 'domain', 'hibernate', 'jackson', 'specification'
+
