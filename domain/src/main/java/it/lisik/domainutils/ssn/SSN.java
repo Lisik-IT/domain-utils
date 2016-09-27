@@ -23,4 +23,9 @@ public class SSN implements ValueObject<String> {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return getValue();
+    }
 }

@@ -2,17 +2,14 @@ package it.lisik.domainutils.ein;
 
 import org.junit.Test;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-
 import static org.junit.Assert.assertEquals;
 
 public class EINTest {
-    private final static String einString = "55-5555555";
+    private final static String formattedEin = "55-5555555";
 
     @Test
     public void testConstructor() {
-        new EIN(einString);
+        new EIN(formattedEin);
     }
 
     @Test(expected = EINNotValidException.class)
@@ -22,8 +19,8 @@ public class EINTest {
 
     @Test
     public void testAccessors() {
-        final EIN ein = new EIN(einString);
+        final EIN ein = new EIN(formattedEin);
 
-        assertEquals(einString, ein.getValue());
+        assertEquals(formattedEin, ein.getValue());
     }
 }

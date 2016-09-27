@@ -31,4 +31,9 @@ public class LastName implements ValueObject<String> {
     public String getValue() {
         return lastName;
     }
+
+    @Override
+    public String toString() {
+        return getValue();
+    }
 }

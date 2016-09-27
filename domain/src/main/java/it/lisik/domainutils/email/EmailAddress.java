@@ -3,7 +3,6 @@ package it.lisik.domainutils.email;
 import com.google.common.base.Preconditions;
 import it.lisik.domainutils.ValueObject;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.jetbrains.annotations.NotNull;
 
@@ -27,8 +26,6 @@ public class EmailAddress implements ValueObject<String> {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("address", address)
-                .toString();
+        return getValue();
     }
 }

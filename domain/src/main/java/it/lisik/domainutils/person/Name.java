@@ -2,7 +2,6 @@ package it.lisik.domainutils.person;
 
 import com.google.common.base.Objects;
 import it.lisik.domainutils.ValueObject;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Name implements ValueObject<String> {
     private final FirstName firstName;
@@ -33,10 +32,7 @@ public class Name implements ValueObject<String> {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("firstName", firstName)
-                .append("lastName", lastName)
-                .toString();
+        return getValue();
     }
 
     public FirstName getFirstName() {

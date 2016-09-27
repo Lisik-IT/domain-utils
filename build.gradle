@@ -12,6 +12,7 @@ buildscript {
 }
 
 plugins {
+    id "com.coverity.ondemand" version "1.5.61"
     id "com.github.kt3k.coveralls" version "2.5.0"
     id 'idea'
 }

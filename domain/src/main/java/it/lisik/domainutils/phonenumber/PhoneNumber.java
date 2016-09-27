@@ -5,7 +5,6 @@ import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 import it.lisik.domainutils.ValueObject;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.jetbrains.annotations.NotNull;
 
 public class PhoneNumber implements ValueObject<String> {
@@ -25,9 +24,7 @@ public class PhoneNumber implements ValueObject<String> {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("phoneNumber", phoneNumber)
-                .toString();
+        return getValue();
     }
 
     @Override
