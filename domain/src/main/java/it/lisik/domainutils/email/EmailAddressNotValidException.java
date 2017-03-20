@@ -1,6 +1,8 @@
 package it.lisik.domainutils.email;
 
-public class EmailAddressNotValidException extends RuntimeException {
+import it.lisik.domainutils.DomainException;
+
+public class EmailAddressNotValidException extends DomainException {
 
     public EmailAddressNotValidException(String address) {
         super("Email address \" " + address + "\" is not valid!");
